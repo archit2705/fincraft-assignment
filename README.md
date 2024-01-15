@@ -11,6 +11,7 @@ _I have added a script to add some users and some products which populates the u
 Please find cURLs for registering user, adding product, fetching all products(by page/ all) and fetch product by id.
 
 1. Register user:
+   
 curl : ```curl --location --request POST 'http://localhost:8080/v1/productCatalog/register' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -20,7 +21,8 @@ curl : ```curl --location --request POST 'http://localhost:8080/v1/productCatalo
     "password" : "archit7"
 }'```
 
-2. Add a product :
+3. Add a product :
+   
 curl : ```curl --location --request POST 'http://localhost:8080/v1/productCatalog/products' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -34,11 +36,14 @@ curl : ```curl --location --request POST 'http://localhost:8080/v1/productCatalo
 }
 '```
 
-3. Fetch all products :
+4. Fetch all products :
+   
    i. Fetch by page :
      curl : ```curl --location --request GET 'http://localhost:8080/v1/productCatalog/products?page=0&size=10'```
+   
    ii. Fetch all : 
       curl : ```curl --location --request GET 'http://localhost:8080/v1/productCatalog/products'```
 
- 4. Fetch Product by id
+ 5. Fetch Product by id
+    
   curl : ```curl --location --request GET 'http://localhost:8080/v1/productCatalog/products/{productId}'```
