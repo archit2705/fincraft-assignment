@@ -1,5 +1,6 @@
 package com.fincraft.assignment.dtos;
 
+import com.fincraft.assignment.validation.ValidUserDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,6 +13,7 @@ import javax.validation.constraints.NotEmpty;
 @Validated
 @AllArgsConstructor
 @Builder
+@ValidUserDto
 public class UserDto {
 
     private Long id;

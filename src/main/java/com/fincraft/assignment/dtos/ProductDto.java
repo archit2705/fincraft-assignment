@@ -1,5 +1,6 @@
 package com.fincraft.assignment.dtos;
 
+import com.fincraft.assignment.validation.ValidProductDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +15,8 @@ import javax.validation.constraints.Positive;
 @Data
 @Validated
 @AllArgsConstructor
+@Builder
+@ValidProductDto
 public class ProductDto {
 
     private Long id;
@@ -33,6 +36,8 @@ public class ProductDto {
     private String brand;
 
     private String imageUrl;
+
+    private Long createdDate;
 
     @NotEmpty(message = "createdBy is required where createdBy = username")
     private String createdBy;
